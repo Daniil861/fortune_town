@@ -43,6 +43,7 @@
         }));
     }
     sessionStorage.setItem("chips-4", true);
+    sessionStorage.setItem("current-chip", 4);
     const preloader = document.querySelector(".preloader");
     const wrapper = document.querySelector(".wrapper");
     function add_remove_className(block, className) {
