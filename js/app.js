@@ -265,6 +265,10 @@
             add_remove_className(".main", "_hide");
             add_remove_className(".shop", "_hide");
             check_bought_chips();
+            let current_chip = +sessionStorage.getItem("current-chip");
+            document.querySelectorAll(".shop__item").forEach((el => {
+                if (el.dataset.chip == current_chip) create_pin(el);
+            }));
         }
         if (targetElement.closest(".main__link_play")) {
             create_chip();
