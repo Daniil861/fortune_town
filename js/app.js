@@ -167,7 +167,6 @@
         item.classList.add("field__chip");
         let image = document.createElement("img");
         let current_chip = sessionStorage.getItem("current-chip");
-        image.setAttribute("src", `img/icons/chip-${current_chip}.png`);
         if (document.documentElement.classList.contains("webp")) image.setAttribute("src", `img/icons/chip-${current_chip}.webp`); else image.setAttribute("src", `img/icons/chip-${current_chip}.png`);
         image.setAttribute("alt", "Icon");
         item.append(image);
@@ -221,9 +220,15 @@
         config_game.numbers_cubs.push(get_random(1, 7));
         config_game.numbers_cubs.push(get_random(1, 7));
         config_game.numbers_cubs.push(get_random(1, 7));
-        image_1.setAttribute("src", `img/game/cub-${config_game.numbers_cubs[0]}.png`);
-        image_2.setAttribute("src", `img/game/cub-${config_game.numbers_cubs[1]}.png`);
-        image_3.setAttribute("src", `img/game/cub-${config_game.numbers_cubs[2]}.png`);
+        if (document.documentElement.classList.contains("webp")) {
+            image_1.setAttribute("src", `img/game/cub-${config_game.numbers_cubs[0]}.webp`);
+            image_2.setAttribute("src", `img/game/cub-${config_game.numbers_cubs[1]}.webp`);
+            image_3.setAttribute("src", `img/game/cub-${config_game.numbers_cubs[2]}.webp`);
+        } else {
+            image_1.setAttribute("src", `img/game/cub-${config_game.numbers_cubs[0]}.png`);
+            image_2.setAttribute("src", `img/game/cub-${config_game.numbers_cubs[1]}.png`);
+            image_3.setAttribute("src", `img/game/cub-${config_game.numbers_cubs[2]}.png`);
+        }
         document.querySelector(".cubs__cub_1").append(image_1);
         document.querySelector(".cubs__cub_2").append(image_2);
         document.querySelector(".cubs__cub_3").append(image_3);
