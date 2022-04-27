@@ -462,13 +462,15 @@ body._hold {
 }
 .field__chip {
   position: absolute;
-  top: -0.625rem;
-  right: -1.25rem;
+  top: 50%;
+  left: 80%;
+  min-width: 3.9375rem;
+  transform: translate(-50%, -50%);
   z-index: 3;
   animation: rotate_chip 0.5s ease forwards;
 }
 .field__chip img {
-  width: 3.9375rem;
+  width: 3.9375rem !important;
 }
 
 .cubs {
@@ -786,10 +788,12 @@ body._hold {
 }
 @keyframes rotate_chip {
   0% {
-    transform: translate(20px, 0) rotate(60deg);
+    left: 80%;
+    transform: translate(-50%, -50%) rotate(60deg);
   }
   100% {
-    transform: translate(0px, 0) rotate(0deg);
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 }
 @keyframes shadow_field {
