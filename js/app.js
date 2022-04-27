@@ -262,6 +262,7 @@
             sessionStorage.setItem("preloader", true);
             preloader.classList.add("_hide");
             wrapper.classList.add("_visible");
+            location.href = "index.html";
         }
         if (targetElement.closest(".main__link_store")) {
             add_remove_className(".main", "_hide");
