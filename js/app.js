@@ -125,6 +125,7 @@
         item.classList.add("shop__check-mark");
         let image = document.createElement("img");
         image.setAttribute("src", "img/icons/check-mark.png");
+        if (document.documentElement.classList.contains("webp")) image.setAttribute("src", `img/icons/check-mark.webp`); else image.setAttribute("src", `img/icons/check-mark.png`);
         item.append(image);
         block.append(item);
     }
@@ -145,7 +146,7 @@
         if (document.querySelector(".block-bet__icon img")) document.querySelector(".block-bet__icon img").remove();
         let num = sessionStorage.getItem("current-chip");
         let image = document.createElement("img");
-        image.setAttribute("src", `img/icons/chip-${num}.png`);
+        if (document.documentElement.classList.contains("webp")) image.setAttribute("src", `img/icons/chip-${num}.webp`); else image.setAttribute("src", `img/icons/chip-${num}.png`);
         image.setAttribute("alt", `Icon`);
         document.querySelector(".block-bet__icon").append(image);
     }
@@ -167,6 +168,7 @@
         let image = document.createElement("img");
         let current_chip = sessionStorage.getItem("current-chip");
         image.setAttribute("src", `img/icons/chip-${current_chip}.png`);
+        if (document.documentElement.classList.contains("webp")) image.setAttribute("src", `img/icons/chip-${current_chip}.webp`); else image.setAttribute("src", `img/icons/chip-${current_chip}.png`);
         image.setAttribute("alt", "Icon");
         item.append(image);
         block.append(item);
@@ -262,7 +264,6 @@
             sessionStorage.setItem("preloader", true);
             preloader.classList.add("_hide");
             wrapper.classList.add("_visible");
-            location.href = "index.html";
         }
         if (targetElement.closest(".main__link_store")) {
             add_remove_className(".main", "_hide");

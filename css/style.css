@@ -122,13 +122,6 @@ body._hold {
 .wrapper._visible {
   display: flex;
 }
-.wrapper__image-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-}
 
 [class*=-ibg] {
   position: relative;
