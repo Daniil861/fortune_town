@@ -5,7 +5,7 @@
 	<title>Fortune Town</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220426204049">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220427134313">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
 </head>
@@ -155,27 +155,27 @@
 				</div>
 			</div>
 		</div>
-		<div class="wrapper__game game _hide">
+		<div class="wrapper__game game">
 			<div class="game__body">
 				<div class="game__field field">
 					<div class="field__body">
-						<div data-lot="1" class="field__item">
-							<picture><source srcset="img/game/lot-1.webp" type="image/webp"><img src="img/game/lot-1.png" alt="Image"></picture>
+						<div data-lot="3" class="field__item">
+							<picture><source srcset="img/game/lot-3.webp" type="image/webp"><img src="img/game/lot-3.png" alt="Image"></picture>
 						</div>
 						<div data-lot="2" class="field__item">
 							<picture><source srcset="img/game/lot-2.webp" type="image/webp"><img src="img/game/lot-2.png" alt="Image"></picture>
 						</div>
-						<div data-lot="3" class="field__item">
-							<picture><source srcset="img/game/lot-3.webp" type="image/webp"><img src="img/game/lot-3.png" alt="Image"></picture>
-						</div>
 						<div data-lot="4" class="field__item">
 							<picture><source srcset="img/game/lot-4.webp" type="image/webp"><img src="img/game/lot-4.png" alt="Image"></picture>
 						</div>
-						<div data-lot="5" class="field__item">
-							<picture><source srcset="img/game/lot-5.webp" type="image/webp"><img src="img/game/lot-5.png" alt="Image"></picture>
+						<div data-lot="1" class="field__item">
+							<picture><source srcset="img/game/lot-1.webp" type="image/webp"><img src="img/game/lot-1.png" alt="Image"></picture>
 						</div>
 						<div data-lot="6" class="field__item">
 							<picture><source srcset="img/game/lot-6.webp" type="image/webp"><img src="img/game/lot-6.png" alt="Image"></picture>
+						</div>
+						<div data-lot="5" class="field__item">
+							<picture><source srcset="img/game/lot-5.webp" type="image/webp"><img src="img/game/lot-5.png" alt="Image"></picture>
 						</div>
 					</div>
 				</div>
@@ -231,8 +231,25 @@
 				</div>
 			</div>
 		</div>
+		<div class="wrapper__win win">
+			<div class="win__sub-text">You Win!</div>
+			<div class="win__text">0</div>
+			<div class="win__body">
+				<button type="button" class="win__button win__button_play button">
+					<p>Play again</p>
+				</button>
+			</div>
+		</div>
+		<div class="wrapper__loose loose">
+			<div class="loose__sub-text">You Loose!</div>
+			<div class="loose__body">
+				<button type="button" class="loose__button loose__button_play button">
+					<p>Play again</p>
+				</button>
+			</div>
+		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220426204049"></script>
+	<script src="js/app.min.js?_v=20220427134313"></script>
 </body>
 
 </html>
