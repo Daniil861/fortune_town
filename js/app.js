@@ -43,6 +43,7 @@
     }
     sessionStorage.setItem("chips-4", true);
     sessionStorage.setItem("current-chip", 4);
+    create_chip();
     const preloader = document.querySelector(".preloader");
     const wrapper = document.querySelector(".wrapper");
     function add_remove_className(block, className) {
@@ -133,6 +134,7 @@
         if (sessionStorage.getItem(`chips-${num}`)) {
             get_current_chip(num);
             create_pin(elem);
+            create_chip();
         } else if (+sessionStorage.getItem("money") >= price) {
             sessionStorage.setItem(`chips-${num}`, true);
             delete_money(price, ".check");
@@ -271,7 +273,6 @@
             }));
         }
         if (targetElement.closest(".main__link_play")) {
-            create_chip();
             add_remove_className(".main", "_hide");
             if (+sessionStorage.getItem("money") > 0) sessionStorage.setItem("current-bet", 100); else sessionStorage.setItem("current-bet", 0);
             document.querySelector(".block-bet__coins").textContent = sessionStorage.getItem("current-bet");
@@ -283,6 +284,7 @@
         if (targetElement.closest(".shop__button_4")) if (sessionStorage.getItem("chips-4")) {
             get_current_chip(4);
             create_pin(targetElement.closest(".shop__item"));
+            create_chip();
         }
         if (targetElement.closest(".shop__button_3")) choice_chip(3, targetElement.closest(".shop__item"));
         if (targetElement.closest(".shop__button_2")) choice_chip(2, targetElement.closest(".shop__item"));
